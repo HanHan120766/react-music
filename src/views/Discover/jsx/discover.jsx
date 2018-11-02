@@ -9,7 +9,7 @@ class Discover extends Component {
   render() {
     return (
       <div className="Discover">
-      23456789
+      Discover
       </div>
     );
   }

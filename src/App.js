@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Route, Redirect} from 'react-router-dom';
+import {Route, Redirect, Switch} from 'react-router-dom';
 import './App.scss';
 import Discover from './views/Discover/jsx/discover';
 import VideoIndex from './views/VideoIndex/videoIndex';
@@ -16,14 +16,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        
         <Tabbar></Tabbar>
-        <Redirect from='/' to='/discover'/>
-        <Route path='/discover' exact component={Discover}/>
-        <Route path='/video' component={VideoIndex}/>
-        <Route path='/music' component={MusicIndex} />
-        <Route path='/friends' component={Friends} />
-        <Route path='/user' component={User} />
+        <Switch>
+          <Route path='/discover' component={Discover}/>
+          <Route path='/video' component={VideoIndex}/>
+          <Route path='/music' component={MusicIndex} />
+          <Route path='/friends' component={Friends} />
+          <Route path='/user' component={User} />
+          
+          <Redirect to='/discover'/>
+        </Switch>
+        
       </div>
     );
   }
