@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Route} from 'react-router-dom';
+import {Route, Redirect} from 'react-router-dom';
 import './App.scss';
 import Discover from './views/Discover/jsx/discover';
 import VideoIndex from './views/VideoIndex/videoIndex';
@@ -18,7 +18,7 @@ class App extends Component {
       <div className="App">
         
         <Tabbar></Tabbar>
-        <Route path='/' exact component={Discover}/>
+        <Redirect from='/' to='/discover'/>
         <Route path='/discover' exact component={Discover}/>
         <Route path='/video' component={VideoIndex}/>
         <Route path='/music' component={MusicIndex} />
