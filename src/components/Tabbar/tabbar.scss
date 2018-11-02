@@ -6,6 +6,37 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  background: $c1;
+  background: #f6f6f6;
   z-index: 999;
+  display: flex;
+  justify-content: inherit;
+  align-items: center;
+}
+.tabbarItem {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #9c9c9c;
+  text-decoration: none;
+}
+.tabbarItem_active {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: $c1;
+  text-decoration: none;
+}
+.tabbaricon {
+  font-size: 0.5rem;
+}
+.tabbarName {
+  padding-top: 0.08rem;
+  font-size: 0.18rem;
+  font-family: PingFangSC-Light;
 }
