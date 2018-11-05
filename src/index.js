@@ -2,10 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter} from 'react-router-dom';
 import './index.scss';
-import './scss/Reset.scss';
+import './scss/common/Reset.scss';
 import './scss/font/iconfont.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { Provider } from 'mobx-react';
+import stores from './models/stores';
 
 (function (doc, win) {
   var docEl = doc.documentElement,
@@ -25,7 +27,9 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render((
   <BrowserRouter>
-    <App />
+    <Provider {...stores}>
+      <App />
+    </Provider>
   </BrowserRouter>
 ), document.getElementById('root'));
 
