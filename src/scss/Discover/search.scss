@@ -1,0 +1,27 @@
+@import './../common//Theme.scss';
+.Search {
+  width: 100%;
+  height: 0.9rem;
+  background: $c1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.audioSearch {
+  font-size: 0.5rem;
+  color: #ffffff;
+}
+.searchInput {
+  width: 5.3rem;
+  height: 0.6rem;
+  background: #D2504C;
+  border-radius: 0.3rem;
+}
+.searchInput {
+  color: #ffffff;
+  font-size: 0.26rem;
+  line-height: 0.6rem;
+}
+.icon-search {
+  margin-right: 0.1rem;
+}

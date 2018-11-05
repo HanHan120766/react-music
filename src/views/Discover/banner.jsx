@@ -14,14 +14,15 @@ class Banner extends Component {
   componentDidMount () {
   }
   render() {
-    const { banners } = this.props
+    var { banners } = this.props;
+    banners = []
     return (
       <div className="Banner">
         {
           banners.map((item, index) => {
             return (
               <div key={'banner-' + index}>
-                <img src={item.picUrl} />
+                
               </div>
             )
           })
