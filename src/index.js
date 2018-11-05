@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter} from 'react-router-dom';
 import './index.scss';
 import './scss/common/Reset.scss';
-import './scss/font/iconfont.scss';
+import './scss/common/font/iconfont.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'mobx-react';

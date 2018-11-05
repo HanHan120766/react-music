@@ -49,7 +49,6 @@ class Tabbar extends Component {
    * 组件渲染完成
    */
   componentDidMount () {
-    console.log(this.props, 123)
   }
   /**
    * 在接受父组件改变后的props需要重新渲染组件时用到的比较多
@@ -65,7 +64,6 @@ class Tabbar extends Component {
    * @param {*} nextState 
    */
   shouldComponentUpdate (nextProps,nextState) {
-    console.log(nextProps)
     return true
   }
 

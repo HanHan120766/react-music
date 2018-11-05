@@ -1,21 +1,22 @@
 
-import { observable, computed, action } from 'mobx';
+import { observable, action } from 'mobx';
+import discoverApi from './../api/discover';
 
 class DiscoverStore {
-  @observable swiperList;
+  @observable bannerList;
   constructor() {
-    this.swiperList = []
+    this.bannerList = []
   }
 
-  //计算属性
   @action
-  swiperListData = data => {
-    this.swiperList = data
+  bannerListData = banner => {
+    this.bannerList = banner
   }
 
-  getSwiperListData = async () => {
-    this.swiperListData([1,2,4]);
+  getbannerListData = async () => {
+    const banner = await discoverApi.getBannerData();
+    this.bannerListData(banner);
   }
 }
 
-module.exports = new DiscoverStore();
+export default new DiscoverStore();
